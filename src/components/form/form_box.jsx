@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { FormOne, form_asker_two, form_asker_three, form_solver_one, form_solver_two, form_solver_three } from './forms.jsx'
+import { FormAskerOne, FormAskerTwo, FormAskerThree, FormSolverOne } from './forms.jsx'
 import { Col, Row, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 
 // import Button from 'react-bootstrap/Button';
@@ -27,21 +27,25 @@ handleSubmit = (selectedTab) => {
 		if (profileType === 'asker'){
 			console.log(`in render here selectedTab is ${selectedTab}`);
 			if (selectedTab === 0) {
-				form = <FormOne handleSubmit = {handleSubmit}/>
+				form = <FormAskerOne  />
 			} else if (selectedTab === 1) {
-				form = form_asker_two
+				form = <FormAskerTwo />
 			} else if (selectedTab === 2) {
-				form = form_asker_three
+				form = <FormAskerThree />
 			}
 		}  else {
-			if (selectedTab === 0) {
-				form = form_one
-			} else if (selectedTab === 1) {
-				form = form_solver_twoi8
-			} else if (selectedTab === 2) {
-				form = form_solver_three
-			}
+			form = <FormSolverOne  />
 		}
+
+		// else {
+		// 	if (selectedTab === 0) {
+		// 		form = form_one
+		// 	} else if (selectedTab === 1) {
+		// 		form = form_solver_twoi8
+		// 	} else if (selectedTab === 2) {
+		// 		form = form_solver_three
+		// 	}
+		// }
 
 		return (
 		<Form className= {className}>
