@@ -20,7 +20,6 @@ render() {
         <div className="navbar-links">
               <a className="nav-link" href="#">About</a>
               <a className="nav-link" href="#">Contact</a>
-              <a className="btn btn-primary login-btn" href="#">Log In</a>
 
         </div>
       </div>
@@ -36,6 +35,7 @@ render() {
 export default Navbar;
 
 
+              // <a className="btn btn-primary login-btn" href="#">Log In</a>
 
 
 

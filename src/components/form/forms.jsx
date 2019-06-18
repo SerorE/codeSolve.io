@@ -4,141 +4,91 @@ import { Col, Row, Button, Form, FormGroup, Label, Input, FormText } from 'react
 
 
 
-class FormOne extends Component {
+class FormAskerOne extends Component {
 
 	render() {
-	<Form inline>
-
-    </Form>
-
 
 		return (
-			<div>
 
+			<Row form>
+			        <Col md={6}>
+				        <FormGroup >
+				          <Label for="name">First & last name</Label>
+				          <Input type="name" name="name" id="" placeholder="John Doe" />
+				        </FormGroup>
+				     </Col>
 
-
-			        <FormGroup>
-
-			<Label for="name">First & Last Name</Label>
-			<Input type="name" name="name" id="" placeholder="John Doe" />
-
-
-        </FormGroup>
-        {' '}
-        <FormGroup>
-          <Label for="exampleEmail" hidden>Email</Label>
-          <Input type="email" name="email" id="exampleEmail" placeholder="Email" />
-        </FormGroup>
-        {' '}
-        <Button className = "submit-button" onClick = {this.props.handleSubmit}>Submit</Button>
-
-
-
-				
-			 </div>
-    );
+				    <Col md={6}>
+				        <FormGroup >
+				          <Label for="name">Email</Label>
+				          <Input type="email" name="name" id="" placeholder="johndoe@gmail.com" />
+				        </FormGroup>
+				     </Col>
+				</Row>
+    	);
 	}
 }
 
 
-const form_one = (
-<div>
-	<Row form>
-        <Col md={6}>
-	        <FormGroup >
-	          <Label for="name">First Name</Label>
-	          <Input type="name" name="name" id="" placeholder="John" />
-	        </FormGroup>
-	     </Col>
 
-	    <Col md={6}>
-	        <FormGroup >
-	          <Label for="name">Last Name</Label>
-	          <Input type="name" name="name" id="" placeholder="John" />
-	        </FormGroup>
-	     </Col>
-	</Row>
+class FormAskerTwo extends Component {
 
-	<Row form>
-	    <Col md={6}>
-	        <FormGroup>
-	          <Label for="exampleEmail">Email</Label>
-	          <Input type="email" name="email" id="" placeholder="johndoe@gmail.com" />
-	          <FormText>We'll never share your email with anyone.</FormText>
+	render() {
 
-	        </FormGroup>
-	    </Col>
+		return (
 
-	     <Col md={6}>
-	         <FormGroup>
-	          <Label for="examplePassword">Password</Label>
-	          <Input type="password" name="password" id="examplePassword" placeholder="strong password" />
-	        </FormGroup>
-         </Col>
-    </Row>
+			<div>
+				<Row form>
+				    <Col md={6}>
+				        <FormGroup >
+				          <Label for="name">Project Title</Label>
+				          <Input type="name" name="name" id="" placeholder="John" />
+				        </FormGroup>
+				     </Col>
 
+					 <Col md={6}>
+					        <FormGroup>
+					          <Label for="exampleFile">File</Label>
+					          <Input type="file" name="file" id="exampleFile" />
+					          <FormText color="muted">
+					            Upload any needed files.
+					          </FormText>
+					        </FormGroup>
 
- </div>
-    );
+					 </Col>
+				</Row>
 
+				<Row form>
+					<FormGroup>
+				        <Label for="exampleText">Text Area</Label>
+				        <Input type="textarea" name="text" id="exampleText" />
+				    </FormGroup>
+				</Row>
+			</div>
+    	);
+	}
+}
 
 
+class FormAskerThree extends Component {
 
-const form_asker_two = (
-<div>
+	render() {
 
-	<Row form>
-	    <Col md={6}>
-	        <FormGroup >
-	          <Label for="name">Project Title</Label>
-	          <Input type="name" name="name" id="" placeholder="John" />
-	        </FormGroup>
-	     </Col>
+		return (
 
-		 <Col md={6}>
-		        <FormGroup>
-		          <Label for="exampleFile">File</Label>
-		          <Input type="file" name="file" id="exampleFile" />
-		          <FormText color="muted">
-		            Upload any files that is needed.
-		          </FormText>
-		        </FormGroup>
-
-		 </Col>
-	</Row>
-
-	<Row form>
-		<FormGroup>
-	        <Label for="exampleText">Text Area</Label>
-	        <Input type="textarea" name="text" id="exampleText" />
-	    </FormGroup>
-	</Row>
-
-</div>
-
-
-	);
-
-
-
-
-const form_asker_three = (
 <div>
 
 	<Row form>
-
-
 		 <Col md={6}>
 	        <FormGroup>
-	        	<Label for="exampleNumber">Maximum Budget</Label>
+	        	<Label for="exampleNumber">Maximum Budget ($)</Label>
 	          	<Input
 	            type="number"
 	            name="number"
 	            id="exampleNumber"
 	            placeholder="50"
 	          />
-	         <FormText>We do the bidding for you.</FormText>
-
+	         <FormText>We'll take care of the bidding for you.</FormText>
 	        </FormGroup>
 		 </Col>
 
@@ -151,63 +101,89 @@ const form_asker_three = (
 	            id="exampleDate"
 	            placeholder="01/12/2019"
 	          />
+	          	 <FormText>A minimum of three days is recommended.</FormText>
+
 	        </FormGroup>
         </Col>
 
 	</Row>
 
 	<Row form>
-		<FormGroup>
-	        <Label for="exampleText">Text Area</Label>
-	        <Input type="textarea" name="text" id="exampleText" />
-	    </FormGroup>
+		<Col md={6}>
+	       <FormGroup>
+	      <Label for="exampleSelect">Task Category</Label>
+          <Input type="select" name="select" id="exampleSelect">
+	            <option>Web Development</option>
+	            <option>Mobile Development</option>
+	            <option>Database</option>
+	            <option>Back-end</option>
+	           	<option>Algorithm</option>
+	          </Input>
+	        </FormGroup>
+        </Col>
+
+		<Col md={6}>
+          	<FormGroup>
+	      <Label for="exampleSelect">Programming Language</Label>
+          <Input type="select" name="select" id="exampleSelect">
+	            <option value="">Select</option>
+	            <option>HTML5</option>
+	            <option>CSS</option>
+	            <option>Rails</option>
+	            <option>Javascript</option>
+	            <option>Wordpress</option>
+	           	<option>PHP</option>
+	            <option>Swift</option>
+	            <option>Python</option>
+	          </Input>
+       		</FormGroup>
+        </Col>
+
 	</Row>
 </div>
 
-
-	);
-
-export {
-  FormOne,
-  form_asker_two,
-  form_asker_three
+    	);
+	}
 }
 
 
-// <Row form>
-// 			        <Col md={6}>
-// 				        <FormGroup >
-// 				          <Label for="name">First Name</Label>
-// 				          <Input type="name" name="name" id="" placeholder="John" />
-// 				        </FormGroup>
-// 				     </Col>
+class FormSolverOne extends Component {
 
-// 				    <Col md={6}>
-// 				        <FormGroup >
-// 				          <Label for="name">Last Name</Label>
-// 				          <Input type="name" name="name" id="" placeholder="John" />
-// 				        </FormGroup>
-// 				     </Col>
-// 				</Row>
+	render() {
 
-// 				<Row form>
-// 				    <Col md={6}>
-// 				        <FormGroup>
-// 				          <Label for="exampleEmail">Email</Label>
-// 				          <Input type="email" name="email" id="" placeholder="johndoe@gmail.com" />
-// 				          <FormText>We'll never share your email with anyone.</FormText>
+		return (
 
-// 				        </FormGroup>
-// 				    </Col>
+			<Row form>
+			        <Col md={6}>
+				        <FormGroup >
+				          <Label for="name">First & last name</Label>
+				          <Input type="name" name="name" id="" placeholder="John Doe" />
+				        </FormGroup>
+				     </Col>
 
-// 				     <Col md={6}>
-// 				         <FormGroup>
-// 				          <Label for="examplePassword">Password</Label>
-// 				          <Input type="password" name="password" id="examplePassword" placeholder="strong password" />
-// 				        </FormGroup>
-// 			         </Col>
-// 			    </Row>
+				    <Col md={6}>
+				        <FormGroup >
+				          <Label for="name">Email</Label>
+				          <Input type="email" name="name" id="" placeholder="johndoe@gmail.com" />
+				          <FormText>We'll contact you shortly.</FormText>
+
+				        </FormGroup>
+				     </Col>
+
+				</Row>
+    	);
+	}
+}
 
 
 
+export {
+  FormAskerOne,
+  FormAskerTwo,
+  FormAskerThree,
+  FormSolverOne
+}
+
+
+	         // <FormText>We do the bidding for you.</FormText>
 

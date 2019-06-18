@@ -32,13 +32,20 @@ class FormContainer extends Component {
 
 	const currentSelectedTab = this.state.selectedTab;
 
-	if ( currentSelectedTab !== 2) {
+if (this.props.profileType === 'asker') {
+
+		if ( currentSelectedTab !== 2) {
 		this.setState ({
 			selectedTab: currentSelectedTab + 1
 		});
 	} else {
 		this.props.journeyOver();
 	}
+
+
+} else {
+			this.props.journeyOver();
+}
 
 }
 
