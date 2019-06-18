@@ -18,10 +18,15 @@ constructor (props) {
 
 
 handleClickLanding = (profileType) => {
-
 	console.log(`profileType from handleClickLanding is ${profileType}`)
 	this.setState ({
 		profileType: profileType
+	});
+}
+
+journeyOver = () => {
+		this.setState ({
+		profileType: 'none'
 	});
 }
 
@@ -37,7 +42,7 @@ render() {
 		formContainer = null
 		landingClassName = 'landing-container'
 	} else {
-		formContainer = <FormContainer profileType = {this.state.profileType} />
+		formContainer = <FormContainer profileType = {this.state.profileType} journeyOver = {this.journeyOver }/>
 		landingClassName = 'landing-container filtered-out'
 	}
 	// console.log('app gets rendered');

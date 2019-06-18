@@ -1,18 +1,12 @@
 import React, { Component } from 'react';
-import TextField from './text_field.jsx'
+import { FormOne, form_asker_two, form_asker_three, form_solver_one, form_solver_two, form_solver_three } from './forms.jsx'
 import { Col, Row, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 
 // import Button from 'react-bootstrap/Button';
 
 
 
-
-
-
-
-
 class FormBox extends Component {
-
 
 handleSubmit = (selectedTab) => {
 	console.log(`submit clicked , props is ${this.props} selectedTab is ${selectedTab}`);
@@ -20,134 +14,48 @@ handleSubmit = (selectedTab) => {
 
 }
 
+	render() {
+		console.log('form box rendered');
+		const profileType = this.props.profileType;
+		const selectedTab = this.props.selectedTab;
+		const loggedIn = this.props.loggedIn;
+		let form;
 
-render() {
+		const className = `${profileType}-form ${profileType}-form-${selectedTab}`;
+		console.log(`in render selectedTab is ${selectedTab}`);
 
-
-	const profileType = this.props.profileType;
-	const selectedTab = this.props.selectedTab;
-	const loggedIn = this.props.loggedIn;
-
-	// const form = <GetForm profileType ={profileType} loggedIn={false} selectedTab={selectedTab} />;
-
-
-
-	const className = `${profileType}-form ${profileType}-form-${selectedTab}`;
-
-	if (profileType === 'asker'){
-		switch (selectedTab) {
-		case 0:
-			return (
-	<Form className= {className}>
-
-
-	<Row form>
-        <Col md={6}>
-	        <FormGroup >
-	          <Label for="name">First Name</Label>
-	          <Input type="name" name="name" id="" placeholder="John" />
-	        </FormGroup>
-	     </Col>
-
-	    <Col md={6}>
-	        <FormGroup >
-	          <Label for="name">Last Name</Label>
-	          <Input type="name" name="name" id="" placeholder="John" />
-	        </FormGroup>
-	     </Col>
-	</Row>
-
-	<Row form>
-	    <Col md={6}>
-	        <FormGroup>
-	          <Label for="exampleEmail">Email</Label>
-	          <Input type="email" name="email" id="" placeholder="johndoe@gmail.com" />
-	        </FormGroup>
-	    </Col>
-
-	     <Col md={6}>
-	         <FormGroup>
-	          <Label for="examplePassword">Password</Label>
-	          <Input type="password" name="password" id="examplePassword" placeholder="strong password" />
-	        </FormGroup>
-         </Col>
-    </Row>
-
-        <Col sm={{ size: 10, offset: 2 }}>
-        	<Button outline color="danger" onClick= {() => this.handleSubmit(selectedTab)}> Submit </Button>
-        </Col>
-     </Form>
-				);
-
-
-		case 1:
-
-
-
-return (
-	<Form className= {className}>
-
-
-	<Row form>
-        <Col md={6}>
-	        <FormGroup >
-	          <Label for="name">First Name</Label>
-	          <Input type="name" name="name" id="" placeholder="John" />
-	        </FormGroup>
-	     </Col>
-
-	    <Col md={6}>
-	        <FormGroup >
-	          <Label for="name">Last Name</Label>
-	          <Input type="name" name="name" id="" placeholder="John" />
-	        </FormGroup>
-	     </Col>
-	</Row>
-
-	<Row form>
-	    <Col md={6}>
-	        <FormGroup>
-	          <Label for="exampleEmail">Email</Label>
-	          <Input type="email" name="email" id="" placeholder="johndoe@gmail.com" />
-	        </FormGroup>
-	    </Col>
-
-	     <Col md={6}>
-	         <FormGroup>
-	          <Label for="examplePassword">Password</Label>
-	          <Input type="password" name="password" id="examplePassword" placeholder="strong password" />
-	        </FormGroup>
-         </Col>
-    </Row>
-
-        <Col sm={{ size: 10, offset: 2 }}>
-        	<Button outline color="danger" onClick= {() => this.handleSubmit(selectedTab)}> Submit </Button>
-        </Col>
-     </Form>
-				);
-
-
-
-
-
-
-		default:
-		return null
+		if (profileType === 'asker'){
+			console.log(`in render here selectedTab is ${selectedTab}`);
+			if (selectedTab === 0) {
+				form = <FormOne handleSubmit = {handleSubmit}/>
+			} else if (selectedTab === 1) {
+				form = form_asker_two
+			} else if (selectedTab === 2) {
+				form = form_asker_three
+			}
+		}  else {
+			if (selectedTab === 0) {
+				form = form_one
+			} else if (selectedTab === 1) {
+				form = form_solver_twoi8
+			} else if (selectedTab === 2) {
+				form = form_solver_three
+			}
 		}
-	} else {
-		console.log('not asker');
+
+		return (
+		<Form className= {className}>
+			{form}
+
+        	<Button className = "submit-button" color="danger" onClick= {() => this.handleSubmit(selectedTab)}> Submit </Button>
+
+
+	     </Form>
+
+
+		); 
+
 	}
-
-	// return form; (
-	// <Form className= {className}>
-	// 	{form}
- //     </Form>
-
-	// 	);
-
-	}
-
 }
-
 
 export default FormBox;

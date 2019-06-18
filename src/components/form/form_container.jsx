@@ -37,7 +37,7 @@ class FormContainer extends Component {
 			selectedTab: currentSelectedTab + 1
 		});
 	} else {
-		console.log('form part over')
+		this.props.journeyOver();
 	}
 
 }
