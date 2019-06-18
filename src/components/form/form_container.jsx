@@ -28,10 +28,11 @@ class FormContainer extends Component {
 	}
 
 
-	handleNextTab = (currentSelectedTab) => {
+	handleNextTab = () => {
 
+	const currentSelectedTab = this.state.selectedTab;
 
-	if (selectedTab !== 2) {
+	if ( currentSelectedTab !== 2) {
 		this.setState ({
 			selectedTab: currentSelectedTab + 1
 		});
@@ -54,10 +55,8 @@ render() {
 
 	return (
       <div className="form-container">
-      <ProgressBar profileType = {profileType} loggedIn = {false} selectedTab = {0}/>
-      <FormBox profileType = {profileType} loggedIn = {false} selectedTab = {0}/>
-
-      	<h1>Asker Box</h1>
+	      <ProgressBar profileType = {profileType} loggedIn = {false} selectedTab = {this.state.selectedTab}/>
+	      <FormBox profileType = {profileType} loggedIn = {false} selectedTab = {this.state.selectedTab} handleNextTab = {this.handleNextTab}/>
       </div>
 		);
 

@@ -44,10 +44,10 @@ const selectedTab = this.props.selectedTab;
             	<h2>Sign Up </h2>
       		</div>
       		<div className={pbeClass(1)}>
-      			<h2>Describe Issue </h2>
+      			<h2>Describe the Issue </h2>
       		</div>
       		 <div className={pbeClass(2)}>
-      		 	<h2>Budget & Time Frame </h2>
+      		 	<h2>Help Us Match You </h2>
       		</div>
 
       </div>
