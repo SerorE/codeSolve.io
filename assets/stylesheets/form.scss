@@ -1,6 +1,6 @@
 .form-container{
 	z-index: 1000;
-	height: 320px;
+	// height: 320px;
 	width: 500px;
 	background-color: white;
 	border-radius: 15px;
@@ -50,4 +50,8 @@ border-style: none;
 	    padding: 25px;
 	    height:280px;
 
+	}
+
+.asker-form-0, .solver-form-0 {
+	  height:180px !important;
 }

@@ -16,7 +16,7 @@ function ProgressBar ({profileType, loggedIn, selectedTab}) {
 	} else {
 		console.log('not asker');
 		if (!loggedIn) {
-			return <SolverBarNotLoggedIn />
+			return <SolverBarNotLoggedIn selectedTab = {selectedTab}/>
 		} else {
 			return <SolverLoggedIn selectedTab = {selectedTab}/>
 		}
@@ -78,16 +78,25 @@ class SolverBarNotLoggedIn extends Component {
 
 render() {
 
+	const selectedTab = this.props.selectedTab;
+
+
 	function pbeClass (tab) {
 		console.log('pbeClass runs')
-		return props.selectedTab == tab ? 'progress-bar-element selected' : 'progress-bar-element'; 
+		return selectedTab == tab ? 'progress-bar-element selected' : 'progress-bar-element'; 
 	}
 
 	return (
       <div className="progress-bar">
+            <div className={pbeClass(1)}>
+      		</div>
+            <div className={pbeClass(0)}>
+            	<h2>Sign Up </h2>
+      		</div>
+   
+
       </div>
 		);
-
 	}
 }
 
