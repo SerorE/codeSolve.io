@@ -13,6 +13,7 @@ class App extends Component {
 constructor (props) {
 	super(props);
 
+
 	this.state = {
 		profileType: 'none'
 	}
@@ -41,24 +42,16 @@ journeyOver = () => {
 render() {
 
 
-const preObject = document.getElementById('object');
+// const preObject = document.getElementById('object');
 
-const dbRefObject = firebase.database().ref().child('object');
+// const dbRefObject = firebase.database().ref().child('object');
 
-console.log('test');
-console.log(dbRefObject);
+// console.log('test');
+// console.log(dbRefObject);
 
-dbRefObject.on('value', snap => {
-	preObject.innerText = JSON.stringify(snap.val(), null, 3);
-});
-
-
-
- firebase.database().ref('users/' + '333').set({
-    name: "a",
-    email: "a",
-  });
-
+// dbRefObject.on('value', snap => {
+// 	preObject.innerText = JSON.stringify(snap.val(), null, 3);
+// });
 
 
 	let formContainer;
@@ -67,8 +60,9 @@ dbRefObject.on('value', snap => {
 	if (this.state.profileType === 'none') {
 		formContainer = null
 		landingClassName = 'landing-container'
+
 	} else {
-		formContainer = <FormContainer profileType = {this.state.profileType} journeyOver = {this.journeyOver }/>
+		formContainer = <FormContainer profileType = {this.state.profileType} userId = {this.state.userId} journeyOver = {this.journeyOver }/>
 		landingClassName = 'landing-container filtered-out'
 	}
 	// console.log('app gets rendered');
@@ -77,7 +71,7 @@ dbRefObject.on('value', snap => {
 		return (
 		    <div >
 
-			    <div className = {landingClassName} >
+			    <div className = {landingClassName} onClick ={() => console.log('landing clicked')} >
 			   		<Navbar />
 			   		<CtaBanner handleClickLanding= {this.handleClickLanding}/>
 			   		<StepsBanner />

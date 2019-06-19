@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import ProgressBar from "./progress_bar.jsx"
 import FormBox from "./form_box.jsx"
+import * as firebase from 'firebase'
+
 
 
 
@@ -23,30 +25,45 @@ class FormContainer extends Component {
 	super(props);
 
 		this.state = {
-			selectedTab: 0
+			selectedTab: 0,
+			userId: Math.floor(Math.random() * 100000)
 		}
+	}
+
+	incrementTab = () => {
+		this.setState ({
+					selectedTab: this.state.selectedTab + 1
+				});
+
 	}
 
 
 	handleNextTab = () => {
 
-	const currentSelectedTab = this.state.selectedTab;
-
-if (this.props.profileType === 'asker') {
-
-		if ( currentSelectedTab !== 2) {
-		this.setState ({
-			selectedTab: currentSelectedTab + 1
-		});
-	} else {
-		this.props.journeyOver();
-	}
-
-
-} else {
-			this.props.journeyOver();
-}
-
+		const currentSelectedTab = this.state.selectedTab;
+		if (this.props.profileType === 'asker') {
+			switch(currentSelectedTab) {
+				case 0:
+					console.log('page 0 submitted');
+					console.log(`currentSelectedTab is ${currentSelectedTab}`)
+					this.incrementTab();
+					break;
+				case 1:
+					console.log('page 1 submitted');
+					console.log(`currentSelectedTab is ${currentSelectedTab}`);
+					this.incrementTab();
+					break;
+				case 2:
+					console.log('page 2 submitted');
+					console.log(`currentSelectedTab is ${currentSelectedTab}`);
+					this.props.journeyOver();
+					break;
+				default:
+					break;
+				}
+			} else {
+				this.props.journeyOver();
+			}
 }
 
 
@@ -63,7 +80,7 @@ render() {
 	return (
       <div className="form-container">
 	      <ProgressBar profileType = {profileType} loggedIn = {false} selectedTab = {this.state.selectedTab}/>
-	      <FormBox profileType = {profileType} loggedIn = {false} selectedTab = {this.state.selectedTab} handleNextTab = {this.handleNextTab}/>
+	      <FormBox profileType = {profileType} loggedIn = {false} selectedTab = {this.state.selectedTab} userId = {this.state.userId} handleNextTab = {this.handleNextTab}/>
       </div>
 		);
 

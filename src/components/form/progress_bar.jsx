@@ -25,6 +25,57 @@ function ProgressBar ({profileType, loggedIn, selectedTab}) {
 
 
 
+
+
+class ProgressBar extends Component {
+
+
+
+
+	function pbeClass (tab) {
+		return selectedTab == tab ? 'progress-bar-element selected-element' : 'progress-bar-element'; 
+	}
+
+
+	render() {
+
+	const profileType = this.props.profileType;
+	const selectedTab = this.props.selectedTab
+
+	if (profileType == 'asker') {
+		return(
+	      <div className="progress-bar">
+	      <i class="fas fa-times close-button"></i>
+	            <div className={pbeClass(0)}>
+	            	<h2>Sign Up </h2>
+	      		</div>
+	      		<div className={pbeClass(1)}>
+	      			<h2>Describe the Issue </h2>
+	      		</div>
+	      		 <div className={pbeClass(2)}>
+	      		 	<h2>Help Us Match You </h2>
+	      		</div>
+
+	      </div>
+		);
+
+	} else {
+		return (
+	      <div className="progress-bar">
+	      <i class="fas fa-times close-button"></i>
+	            <div className={pbeClass(1)}>
+	      		</div>
+	            <div className={pbeClass(0)}>
+	            	<h2>Sign Up </h2>
+	      		</div>
+	      </div>
+			);
+		}
+	}
+
+}
+
+
 class AskerBarNotLoggedIn extends Component {
 
 render() {
@@ -39,18 +90,7 @@ const selectedTab = this.props.selectedTab;
 
 
 	return (
-      <div className="progress-bar">
-            <div className={pbeClass(0)}>
-            	<h2>Sign Up </h2>
-      		</div>
-      		<div className={pbeClass(1)}>
-      			<h2>Describe the Issue </h2>
-      		</div>
-      		 <div className={pbeClass(2)}>
-      		 	<h2>Help Us Match You </h2>
-      		</div>
 
-      </div>
 		);
 
 	}
@@ -86,17 +126,7 @@ render() {
 		return selectedTab == tab ? 'progress-bar-element selected' : 'progress-bar-element'; 
 	}
 
-	return (
-      <div className="progress-bar">
-            <div className={pbeClass(1)}>
-      		</div>
-            <div className={pbeClass(0)}>
-            	<h2>Sign Up </h2>
-      		</div>
-   
 
-      </div>
-		);
 	}
 }
 
