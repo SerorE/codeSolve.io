@@ -3,4 +3,5 @@ dist
 /node_modules
 yarn-error.log
 src/index.jsx
+src/config/fbConfig
 
