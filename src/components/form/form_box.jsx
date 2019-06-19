@@ -33,10 +33,11 @@ handleSubmit = () => {
 		const userId = this.props.userId;
 		const profileType = this.props.profileType;
 
-
+const testMode = false;
 
 console.log(`userId is ${userId}`);
 
+	if (!testMode){ 
 
 	switch (selectedTab) {
 		case 0:
@@ -56,13 +57,16 @@ console.log(`userId is ${userId}`);
 		    max_budget: this.state.max_budget,
 		    due_for: this.state.due_for,
 		   	task_cat: this.state.task_cat,
-		    programming_language: this.programming_language
+		    programming_language: this.state.programming_language
 		  });
 		  break;
 
 		default:
 		break;
 	}
+
+	} 
+
 
 	// ref('tab/' + selectedTab)
 
@@ -80,10 +84,14 @@ handleChange = (event) => {
     this.setState({
     	[name]: value
     });
-	// console.log(event.target.value);
-	// console.log(event.target.id);
-
 }
+
+
+// handleSelection = selectedOption => {
+//     this.setState({
+//     	'task_cat': selectedOption
+//     });
+// }
 
 
 	render() {
@@ -139,7 +147,7 @@ console.log(`userId is ${userId}`);
 					    <Col md={6}>
 					        <FormGroup >
 					          <Label for="text">Project Title</Label>
-					          <Input type="text" placeholder="John" id="project_title" onChange={this.handleChange}/>
+					          <Input type="text" placeholder="John" value = {this.props.project_title} id="project_title" onChange={this.handleChange}/>
 					        </FormGroup>
 					     </Col>
 
@@ -206,7 +214,7 @@ console.log(`userId is ${userId}`);
 					<Col md={6}>
 				       <FormGroup>
 				      <Label for="exampleSelect">Task Category</Label>
-			          <Input type="select" name="select" id="task_cat" onChange={this.handleChange} >
+			          <Input type="select"  id="task_cat" onChange={this.handleChange} >
 				            <option>Web Development</option>
 				            <option>Mobile Development</option>
 				            <option>Database</option>
@@ -217,19 +225,23 @@ console.log(`userId is ${userId}`);
 			        </Col>
 
 					<Col md={6}>
-			          	<FormGroup>
+			        
+			        <FormGroup>
+
 				      <Label for="exampleSelect">Programming Language</Label>
-			          <Input type="select" name="select" id="programming_language" onChange={this.handleChange}>
-				            <option value="">Select</option>
-				            <option>HTML5</option>
-				            <option>CSS</option>
-				            <option>Rails</option>
-				            <option>Javascript</option>
-				            <option>Wordpress</option>
-				           	<option>PHP</option>
-				            <option>Swift</option>
-				            <option>Python</option>
-				          </Input>
+
+			          	<Input type="select" id="programming_language" onChange={this.handleChange} >
+ 							<option selected value = "HTML5">HTML5</option>
+				            <option value = "CSS">CSS</option>
+				            <option value = "Rails">Rails</option>
+				            <option value = "Javascript">Javascript</option>
+				            <option value = "Wordpress">Wordpress</option>
+				           	<option value = "PHP">PHP</option>
+				            <option value = "Swift" >Swift</option>
+				            <option value = "Python">Python</option>
+						</Input>
+
+
 			       		</FormGroup>
 			        </Col>
 

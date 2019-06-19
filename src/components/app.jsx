@@ -5,7 +5,7 @@ import StepsBanner from './landing/steps_banner.jsx';
 
 import HeadsBanner from './landing/heads_banner.jsx';
 import FormContainer from './form/form_container.jsx';
-import * as firebase from 'firebase'
+import firebase from '../config/fbConfig';
 
 
 class App extends Component {
@@ -34,12 +34,7 @@ journeyOver = () => {
 }
 
 
-
-
 render() {
-
-
-
 
 	let formContainer;
 	let landingClassName;
@@ -64,7 +59,6 @@ render() {
 			   		<StepsBanner />
 
 			   		<HeadsBanner />
-			   		<div className="rounded-transition"> </div>
 
 			    </div>
 			    {formContainer}
@@ -72,6 +66,9 @@ render() {
 			);
 	}
 }
+
+
+			   		// <div className="rounded-transition"> </div>
 
 
 export default App;

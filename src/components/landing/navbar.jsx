@@ -19,7 +19,6 @@ render() {
 
         <div className="navbar-links">
         <div ></div>
-              <a className="nav-link" href="#">About</a>
               <a className="nav-link" href="#">Contact</a>
 
         </div>
@@ -41,3 +40,4 @@ export default Navbar;
 
 
 
+              // <a className="nav-link" href="#">About</a>

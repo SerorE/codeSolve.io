@@ -31,8 +31,9 @@ code {
 	left: 0px;
 	width:100%;
 
-  background: rgb(43,47,130);
-  background: linear-gradient(90deg, rgba(43,47,130,1) 0%, rgba(57,63,174,1) 50%, rgba(43,47,130,1) 100%);
+  // background: rgb(43,47,130);
+  // background: linear-gradient(90deg, rgba(43,47,130,1) 0%, rgba(57,63,174,1) 50%, rgba(43,47,130,1) 100%);
+  background-color: white;
   shape-outside: circle(45%);
 	display: flex;
   flex-direction: column;
@@ -229,8 +230,9 @@ flex-direction: row;
 }
 
 .login-btn, .issue-btn{
-  background-color : #da484f;
-  border-color:  #c44047;
+  background-color: #484fda;
+  // background-color : #da484f;
+  // border-color:  #c44047;
   color: white;
 
 
@@ -248,6 +250,14 @@ flex-direction: row;
   font-weight: 300;
 
 
+}
+
+.solver-btn{
+      line-height: 35px !important;
+
+  color: #da484f !important;
+  border-width: 1px !important;
+  border-color: #da484f !important;
 }
 
 .issue-btn {
@@ -302,12 +312,12 @@ flex-direction: row;
 .banner h2 {
   margin-top: 30px;
     margin-bottom: 30px;
-
+color: black;
 letter-spacing: 1.7px;
 font-weight: 300;
   font-size: 25px;
-  color: white;
-  opacity: .8;
+  // color: white;
+  // opacity: .8;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
@@ -320,14 +330,15 @@ margin-top: 20px;
   align-content: center;
   position: relative;
   bottom : 0px;
-      margin-top: 110px;
+  margin-top: 110px;
 
     // max-width: 600px;
   margin-left: auto;
-    margin-right: auto;
+  margin-right: auto;
 justify-content: space-between;
 display: flex;
 flex-direction: row;
+
 
   // background-color: rgba(255,255,255,0.5);
 
@@ -357,8 +368,8 @@ background-color: rgba(255,255,255,0.7);
     margin-left: 30px;
     width: 140px;
     font-size: 17px;
-    font-weight: 300;
-    color: #484fda;
+    font-weight: 500;
+    color: black;
   }
 
 }
