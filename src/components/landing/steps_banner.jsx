@@ -19,9 +19,9 @@ class StepsBanner extends Component {
     return steps.map(({stepImage,stepText}) => {
 
         const srcImage = `./src/images/icons/${stepImage}.png`;
-
+        const id = `${stepImage}`
       return (
-          <div key={stepImage} className="step-circle">
+          <div key={stepImage} className="step-circle" id = {id}>
                   <img src= {srcImage} className = 'step-icon'/>
                 <p> {stepText }</p>
           </div>
