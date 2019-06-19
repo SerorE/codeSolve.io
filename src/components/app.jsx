@@ -5,6 +5,9 @@ import StepsBanner from './landing/steps_banner.jsx';
 
 import HeadsBanner from './landing/heads_banner.jsx';
 import FormContainer from './form/form_container.jsx';
+import firebase from '../config/fbConfig';
+//mport * as firebase from 'firebase'
+
 
 class App extends Component {
 
@@ -31,8 +34,27 @@ journeyOver = () => {
 }
 
 
-
 render() {
+
+
+const preObject = document.getElementById('object');
+
+const dbRefObject = firebase.database().ref().child('object');
+
+console.log('test');
+console.log(dbRefObject);
+
+dbRefObject.on('value', snap => {
+	preObject.innerText = JSON.stringify(snap.val(), null, 3);
+});
+
+
+
+ firebase.database().ref('users/' + '333').set({
+    name: "a",
+    email: "a",
+  });
+
 
 
 	let formContainer;
@@ -50,6 +72,7 @@ render() {
 
 		return (
 		    <div >
+
 			    <div className = {landingClassName} >
 			   		<Navbar />
 			   		<CtaBanner handleClickLanding= {this.handleClickLanding}/>

@@ -68,6 +68,9 @@ console.log(`userId is ${userId}`);
 
 	this.props.handleNextTab()
 
+
+	const rootRef = firebase.database().ref().child('react');
+
 }
 
 
@@ -85,10 +88,6 @@ handleChange = (event) => {
 }
 
 	render() {
-
-
-const userId = this.props.userId;
-console.log(`userId is ${userId}`);
 
 		const profileType = this.props.profileType;
 		const selectedTab = this.props.selectedTab;

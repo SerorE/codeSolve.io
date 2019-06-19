@@ -60,7 +60,7 @@ class FormAskerTwo extends Component {
 
 				<Row form>
 					<FormGroup>
-				        <Label for="exampleText">Text Area</Label>
+				        <Label for="exampleText">Please describe as precisely as possible</Label>
 				        <Input type="textarea" name="text" id="exampleText" />
 				    </FormGroup>
 				</Row>
