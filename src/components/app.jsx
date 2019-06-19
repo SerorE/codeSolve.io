@@ -5,7 +5,8 @@ import StepsBanner from './landing/steps_banner.jsx';
 
 import HeadsBanner from './landing/heads_banner.jsx';
 import FormContainer from './form/form_container.jsx';
-import * as firebase from 'firebase'
+import firebase from '../config/fbConfig';
+//mport * as firebase from 'firebase'
 
 
 class App extends Component {
@@ -31,11 +32,6 @@ journeyOver = () => {
 		profileType: 'none'
 	});
 }
-
-
-
-
-
 
 
 render() {
