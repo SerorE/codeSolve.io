@@ -21,7 +21,7 @@ class StepsBanner extends Component {
         const srcImage = `./src/images/icons/${stepImage}.png`;
 
       return (
-          <div className="step-circle">
+          <div key={stepImage} className="step-circle">
                   <img src= {srcImage} className = 'step-icon'/>
                 <p> {stepText }</p>
           </div>

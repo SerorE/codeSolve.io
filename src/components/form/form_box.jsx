@@ -37,6 +37,7 @@ handleSubmit = () => {
 
 console.log(`userId is ${userId}`);
 
+
 	switch (selectedTab) {
 		case 0:
 		  firebase.database().ref('forms/' + profileType + '/Id - ' + userId + '/tab' + selectedTab ).set({
@@ -84,11 +85,12 @@ handleChange = (event) => {
 
 }
 
-	render() {
 
+	render() {
 
 const userId = this.props.userId;
 console.log(`userId is ${userId}`);
+
 
 		const profileType = this.props.profileType;
 		const selectedTab = this.props.selectedTab;

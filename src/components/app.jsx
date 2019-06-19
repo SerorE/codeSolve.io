@@ -36,22 +36,9 @@ journeyOver = () => {
 
 
 
-
-
-
 render() {
 
 
-// const preObject = document.getElementById('object');
-
-// const dbRefObject = firebase.database().ref().child('object');
-
-// console.log('test');
-// console.log(dbRefObject);
-
-// dbRefObject.on('value', snap => {
-// 	preObject.innerText = JSON.stringify(snap.val(), null, 3);
-// });
 
 
 	let formContainer;
@@ -85,5 +72,6 @@ render() {
 			);
 	}
 }
+
 
 export default App;

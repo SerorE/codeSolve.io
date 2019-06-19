@@ -30,7 +30,7 @@ class HeadsBanner extends Component {
 
       return (
 
-          <div className="language-box">
+          <div key={languageImage} className="language-box">
 
                 <img src= {srcFace} className = 'face-avatar'/>
                 <div className = "language-box-lower">
