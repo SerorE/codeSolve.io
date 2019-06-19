@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { FormAskerOne, FormAskerTwo, FormAskerThree, FormSolverOne } from './forms.jsx'
 import { Col, Row, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import * as firebase from 'firebase'
 
 // import Button from 'react-bootstrap/Button';
 
@@ -12,9 +13,21 @@ handleSubmit = (selectedTab) => {
 	console.log(`submit clicked , props is ${this.props} selectedTab is ${selectedTab}`);
 	this.props.handleNextTab()
 
+
+	const rootRef = firebase.database().ref().child('react');
+
 }
 
 	render() {
+
+
+  // firebase.database().ref('users/' + userId).set({
+  //   name: "a",
+  //   email: "a",
+  // });
+
+
+
 		console.log('form box rendered');
 		const profileType = this.props.profileType;
 		const selectedTab = this.props.selectedTab;
