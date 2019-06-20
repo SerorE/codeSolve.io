@@ -42,13 +42,14 @@
 
 .submit-button {
 	margin: 0 auto;
-    width: 140px;
-    border-radius: 3px;
+    width: 180px;
+    border-radius: 0;
     font-size: 18px;
     text-transform: uppercase;
     font-weight: 600;
-    padding: 8px 0;
-    display: block; 
+    padding: 18px 0;
+    display: block;
+    margin-top: 20px;
 }
 
 .progress-bar-element {
@@ -89,7 +90,7 @@
 		text-transform: capitalize;
 	}
 }     
-/*
+ /*
 .progress-bar-element {
 	h2:before { 
 	position: absolute;
@@ -103,15 +104,16 @@
 	}
 }
 
-
 .progress-bar-element:nth-child(2) {
 	h2:before {	
-		background: url('../stylesheets/user.png');  
+		background: url('../images/user.png');  
 	}      
-}*/
+} 
  
 //.progress-bar-element:nth-child(3) h2:before {	background-image: url('../stylesheets/edit.png'); }
 //.progress-bar-element:nth-child(4) h2:before {	background-image: url('../stylesheets/question.png'); }
+
+*/
 
 
 

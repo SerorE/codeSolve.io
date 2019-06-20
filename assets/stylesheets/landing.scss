@@ -70,12 +70,14 @@ code {
 
 //navbar
 .navbar{
-	height: 70px;
-	// background-color: rgba(255,255,255,0.5);
-	  	background-color: rgba(255,255,255,0.7);
-
-	display: flex;
-	justify-content: space-between;
+  height: 70px;
+    min-height: 65px !important;
+    background-color: #f4f4f794;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0 !important;
+  .navbar-brand {
+    height: auto;}
 }
 
 .navbar-links {
@@ -86,6 +88,7 @@ code {
 .navbar-brand img {
   width: 200px;
 }
+
 
 
 
@@ -117,7 +120,7 @@ margin-right: auto;
 
 
   position: relative;
-  bottom : -137px;
+  bottom : -48px;
 
     // max-width: 600px;
   margin-left: auto;
@@ -133,32 +136,14 @@ flex-direction: row;
 
 .language-box{
   width: 120px;
-  height: 120px;
-  border-radius: 10px;
-
+  height: auto;
+  border-radius: 4px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  // position: absolute;
-  // align-items: center;
-  // align-content: center;
-  margin: 0px 20px;
-
-
+  margin: 0px 10px;
   background-color: #dadbf7;
-
-	  	// background-color: rgba(255,255,255,0.7);
-
-// background-color: rgba(255,255,255,0.5);
-// text-align: center;
-// border-color: #b5b8f0;
-// border-width: 1.5px;
-// border-style: solid;
-
-
-// -webkit-box-shadow: 2px 2px 7px -3px rgba(145,149,232,1);
-// -moz-box-shadow: 2px 2px 7px -3px rgba(145,149,232,1);
-// box-shadow: 2px 2px 7px -3px rgba(145,149,232,1);
+  padding: 20px 0;
 
 }
 
@@ -198,9 +183,9 @@ flex-direction: row;
 
   .step-icon{
     width: 100px;
-  height: 100px;
-  position: relative;
-  margin-left: 50px;
+    height: 100px;
+    position: relative;
+    margin: 0 auto;
 
 
   }
@@ -226,11 +211,14 @@ flex-direction: row;
 
 
 .nav-link {
-	// padding:20px 0px;
-	margin-top: 25px;
-  color : #da484f !important;
+  margin-top: 00;
+  color: #484fda !important;
   padding-right: 2rem !important;
   padding-left: 2rem !important;
+  padding-top: 20px;
+  text-transform: capitalize;
+  font-weight: 600;
+  letter-spacing: 0.8px;
 }
 
 .login-btn, .issue-btn{
@@ -249,7 +237,7 @@ flex-direction: row;
 
 .issue-btn, .solver-btn{
   height:50px;
-  width: 180px;
+  width: 200px;
   font-size: 23px;
   font-weight: 300;
 
@@ -300,8 +288,9 @@ flex-direction: row;
   text-align: center;
   background-size: cover;
   background-position: center;
-  padding-top: 20px;
-  padding-bottom: 100px;
+  padding: 4.5% 0;
+  background-color: #ffda2d;
+  margin-bottom: 34px;
 
 }
 
@@ -314,15 +303,12 @@ flex-direction: row;
 }
 
 .banner h2 {
-  margin-top: 30px;
-    margin-bottom: 30px;
-color: black;
-letter-spacing: 1.7px;
-font-weight: 300;
+  margin: 0;
+  color: #484fda;
+  letter-spacing: 1.7px;
+  font-weight: 300;
   font-size: 25px;
-  // color: white;
-  // opacity: .8;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  padding: 0 0 25px;
 }
 
 .banner .signup-btn {
@@ -344,45 +330,56 @@ display: flex;
 flex-direction: row;
 
 
+
   // background-color: rgba(255,255,255,0.5);
 
 
 }
 
 .step-circle{
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  // position: absolute;
-  // align-items: center;
-  // align-content: center;
-  margin: 0px 80px;
-  text-align: center;
-
-
-  // background-color: #dadbf7;
-
-background-color: rgba(255,255,255,0.7);
+  width: 255px;
+    height: auto;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 0px 15px;
+    text-align: center;
+    background-color: #ececf133;
+    padding: 50px 0;
+    box-shadow: 0 6px 0px #979cff;
+    border: 1px solid #cccccc4a;
+    border-bottom: 0;
 
   p{
-    margin-left: 30px;
-    width: 140px;
-    font-size: 17px;
+    width: auto;
+    font-size: 18px;
     font-weight: 500;
     color: black;
+    box-sizing: border-box;
+    padding: 0 30px;
+    margin-top: 22px;
   }
 
 
 
 
 }
-
+.ctas-container a.btn {
+  border-radius: 0;border: none;
+}
+.ctas-container a.btn:hover {
+  background-color: #ffffff;
+  color: #484fda;
+}
+.ctas-container a.solver-btn {
+  background-color: #e63950;
+  border: none;
+  color: #fff !important;
+}
+.ctas-container a.solver-btn:hover{color: #484fda !important;}
   #computer, #star{
-    margin-top: 150px !important;
+    margin-top: 0 !important;
   }
 
 

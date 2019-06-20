@@ -28,11 +28,13 @@
   },
   "dependencies": {
     "bootstrap": "^4.3.1",
+    "file-loader": "^4.0.0",
     "firebase": "^6.2.0",
     "firebase-tools": "^7.0.0",
     "react": "^16.9.0-alpha.0",
     "react-dom": "16.2",
-    "reactstrap": "^8.0.0"
+    "reactstrap": "^8.0.0",
+    "url-loader": "^2.0.0"
   },
   "scripts": {
     "start": "webpack-dev-server --mode development",
