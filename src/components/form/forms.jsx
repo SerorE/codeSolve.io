@@ -15,14 +15,7 @@ class FormAskerOne extends Component {
     		email:""
     	}
     };
-
-
   }
-
-
-
-
-
 
 	handleChange = (event) => {
 		this.setState(
@@ -76,25 +69,24 @@ class FormSolverOne extends Component {
 	render() {
 
 		return (
+			<div className='div_main'>
+				<Row form>
+						<Col md={12}>             
+							<FormGroup >
+								<Label for="name">First & last name</Label>
+								<Input type="name" name="name" id="" placeholder="John Doe" />
+							</FormGroup>
+						</Col>
 
-			<Row form>
-			        <Col md={6}>
-				        <FormGroup >
-				          <Label for="name">First & last name</Label>
-				          <Input type="name" name="name" id="" placeholder="John Doe" />
-				        </FormGroup>
-				     </Col>
-
-				    <Col md={6}>
-				        <FormGroup >
-				          <Label for="name">Email</Label>
-				          <Input type="email" name="name" id="" placeholder="johndoe@gmail.com" />
-				          <FormText>We'll contact you shortly.</FormText>
-
-				        </FormGroup>
-				     </Col>
-
-				</Row>
+						<Col md={12}>       
+							<FormGroup >
+								<Label for="name">Email</Label>
+								<Input type="email" name="name" id="" placeholder="johndoe@gmail.com" />
+								<FormText>We'll contact you shortly.</FormText>
+							</FormGroup>
+						</Col>  
+				</Row>           
+			</div>                                            
     	);
 	}
 }

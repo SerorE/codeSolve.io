@@ -114,71 +114,78 @@ console.log(`userId is ${userId}`);
 		switch(selectedTab) {
 		case 0:
 			return (
+                <div className='div_main'>
+					<Form className= {className}>
+					
+						<Row form>
+							<Col md={12}>
+								<FormGroup >
+								<Label for="name">First & last name</Label>
+								<Input type="name" name="name" placeholder="John Doe" id="name" onChange={this.handleChange}/>
+								</FormGroup>
+							</Col>
 
-				<Form className= {className}>
-
-					<Row form>
-				        <Col md={6}>
-					        <FormGroup >
-					          <Label for="name">First & last name</Label>
-					          <Input type="name" name="name" placeholder="John Doe" id="name" onChange={this.handleChange}/>
-					        </FormGroup>
-					     </Col>
-
-					    <Col md={6}>
-					        <FormGroup >
-					          <Label for="name">Email</Label>
-					          <Input type="email" name="name" placeholder="johndoe@gmail.com" id="email" onChange={this.handleChange} />
-					        </FormGroup>
-					     </Col>
-					</Row>
-
-					<Button className = "submit-button" color="danger" onClick= {() => this.handleSubmit()}> Submit </Button>
-
-	     		</Form>
-
+							<Col md={12}>
+								<FormGroup >
+								<Label for="name">Email</Label>
+								<Input type="email" name="name" placeholder="johndoe@gmail.com" id="email" onChange={this.handleChange} />
+								</FormGroup>
+							</Col>
+						</Row>
+						<Row form>
+						<Col md={12}>
+							<Button className = "submit-button" color="danger" onClick= {() => this.handleSubmit()}> Submit </Button>
+							</Col>  
+						</Row>
+						
+					</Form>
+					</div>
 					);
 				break;
 			case 1:
 				return (
+					<div className='div_main'>
+						<Form className= {className}>
+						<Row form>
+							<Col md={6}>
+								<FormGroup >
+									<Label for="text">Project Title</Label>
+									<Input type="text" placeholder="John" value = {this.props.project_title} id="project_title" onChange={this.handleChange}/>
+								</FormGroup>
+								</Col>
 
-				<Form className= {className}>
-					<Row form>
-					    <Col md={6}>
-					        <FormGroup >
-					          <Label for="text">Project Title</Label>
-					          <Input type="text" placeholder="John" value = {this.props.project_title} id="project_title" onChange={this.handleChange}/>
-					        </FormGroup>
-					     </Col>
+								<Col md={6}>
+									<FormGroup>
+										<Label for="exampleFile">File</Label>
+										<Input type="file" name="file" id="exampleFile" />
+										<FormText color="muted">
+										Upload any needed files.
+										</FormText>
+									</FormGroup>
 
-						 <Col md={6}>
-						        <FormGroup>
-						          <Label for="exampleFile">File</Label>
-						          <Input type="file" name="file" id="exampleFile" />
-						          <FormText color="muted">
-						            Upload any needed files.
-						          </FormText>
-						        </FormGroup>
+								</Col>
+						</Row>
 
-						 </Col>
-					</Row>
-
-					<Row form>
-						<FormGroup>
-					        <Label for="exampleText">Please describe as precisely as possible</Label>
-					        <Input type="textarea" name="text" id="project_description"  onChange={this.handleChange} />
-					    </FormGroup>
-					</Row>
-
-					<Button className = "submit-button" color="danger" onClick= {() => this.handleSubmit()}> Submit </Button>
-
-	     		</Form>
-
+						<Row form>
+							<Col md={12}>
+								<FormGroup>
+									<Label for="exampleText">Please describe as precisely as possible</Label>
+									<Input type="textarea" name="text" id="project_description"  onChange={this.handleChange} />
+								</FormGroup>
+							</Col>
+						</Row>
+						<Row form>
+							<Col md={12}>
+							   <Button className = "submit-button" color="danger" onClick= {() => this.handleSubmit()}> Submit </Button>
+							</Col>
+						</Row>
+						</Form>
+					</div>
 					);
 				break;
 			case 2:
 				return(
-
+					<div className='div_main'>  
 				<Form className= {className}>
 
 				<Row form>
@@ -249,7 +256,7 @@ console.log(`userId is ${userId}`);
 
 				<Button className = "submit-button" color="danger" onClick= {() => this.handleSubmit()}> Submit </Button>
 	     		</Form>
-
+                </div>
 					);
 				break;
 			default:
@@ -258,16 +265,17 @@ console.log(`userId is ${userId}`);
 
 		} else {
 			return (
+				<div className='div_main'> 
 				<Form className= {className}>
 				<Row form>
-			        <Col md={6}>
+			        <Col md={12}>
 				        <FormGroup >
 				          <Label for="name">First & last name</Label>
 				          <Input type="name" name="name" id="" placeholder="John Doe" />
 				        </FormGroup>
 				     </Col>
 
-				    <Col md={6}>
+				    <Col md={12}>
 				        <FormGroup >
 				          <Label for="name">Email</Label>
 				          <Input type="email" name="name" id="" placeholder="johndoe@gmail.com" />
@@ -277,9 +285,13 @@ console.log(`userId is ${userId}`);
 				     </Col>
 
 				</Row>
-
-				<Button className = "submit-button" color="danger" onClick= {() => this.handleSubmit()}> Submit </Button>
+				  <Row form>
+			        <Col md={12}>
+				        <Button className = "submit-button" color="danger" onClick= {() => this.handleSubmit()}> Submit </Button>
+				   </Col>
+                  </Row>
 	     		</Form>
+				 </div>
 				);
 
 		}
