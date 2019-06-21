@@ -10,15 +10,16 @@ class StepsBanner extends Component {
     
     console.log('render list started');
     const steps = [
-    { stepImage: "computer", stepText: "1. Describe your issue" },
-    { stepImage: "calendar", stepText: "2. Specify budget & time frame" },
-    { stepImage: "star", stepText: "3. Get the work, rate it!" }
+    { stepImage: "computer", stepText: "1. Describe your issue, share your code" },
+    { stepImage: "calendar", stepText: "2. Agree on price & deadline" },
+    { stepImage: "star", stepText: "3. Get the work and rate it!" }
 
     ];
 
     return steps.map(({stepImage,stepText}) => {
 
-        const srcImage = `./src/images/icons/${stepImage}.png`;
+        const srcImage = `https://codesolve-4122b.firebaseapp.com/images/icons/${stepImage}.png`;
+
         const id = `${stepImage}`
       return (
           <div key={stepImage} className="step-circle" id = {id}>

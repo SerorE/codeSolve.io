@@ -13,7 +13,7 @@ render() {
 
       <div className="navbar">
         <a className="navbar-brand" href="#">
-          <img src="./src/images/logo.png" />
+          <img src="https://codesolve-4122b.firebaseapp.com/images/logo.png" />
         </a>
 
 

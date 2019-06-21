@@ -11,21 +11,22 @@ class HeadsBanner extends Component {
     
     console.log('render list started');
     const heads = [
-    { personImage: "", languageImage: "swift", personName: "Simon N.G." },
-    { personImage: "", languageImage: "php", personName: "Khloe L." },
-    { personImage: "", languageImage: "html5", personName: "Marina N." },
-    { personImage: "", languageImage: "javascript", personName: "Maurice J." },
-    { personImage: "", languageImage: "python", personName: "Andrew P." },
-    { personImage: "", languageImage: "wordpress", personName: "Peter M." }
+    { personImage: "", languageImage: "swift", personName: "Simon N.G.", specialty: "Swift & Obj-c Expert" },
+    { personImage: "", languageImage: "php", personName: "Khloe L.", specialty: "Wordpress & Design" },
+    { personImage: "", languageImage: "html5", personName: "Marina N.", specialty: "HTML5 Developer" },
+    { personImage: "", languageImage: "javascript", personName: "Maurice J.", specialty: "Sr. Javascript Developer" },
+    { personImage: "", languageImage: "objc", personName: "Rajesh S.", specialty: "AWS Database Engineer" },
+    { personImage: "", languageImage: "python", personName: "Andrew P.", specialty: "Python Developer" },
+    { personImage: "", languageImage: "wordpress", personName: "Peter M.", specialty: "PHP Developer" }
 
     ];
 
     console.log(`heads is ${heads}`);
 
-    return heads.map(({personImage,languageImage, personName }) => {
+    return heads.map(({personImage,languageImage, personName, specialty }) => {
 
-        const srcLanguage = `./src/images/icons/${languageImage}.png`;
-        const srcFace = `./src/images/faces/${languageImage}.png`;
+        const srcLanguage = `https://codesolve-4122b.firebaseapp.com/images/icons/${languageImage}.png`;
+        const srcFace = `https://codesolve-4122b.firebaseapp.com/images/faces/${languageImage}.png`;
 
 
       return (
@@ -34,9 +35,10 @@ class HeadsBanner extends Component {
 
                 <img src= {srcFace} className = 'face-avatar'/>
                 <div className = "language-box-lower">
-                  <div>{personName}</div>
+                  <div className = "person-name">{personName}</div>
+                  <div className = "specialty">{specialty}</div>
 
-                  <img src= {srcLanguage} className = 'language-icon'/>
+
 
                 </div>
           </div>
@@ -67,5 +69,6 @@ export default HeadsBanner;
 
 
 
+                  // <img src= {srcLanguage} className = 'language-icon'/>
 
 
