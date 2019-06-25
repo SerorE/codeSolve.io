@@ -3,9 +3,6 @@ import ProgressBar from "./progress_bar.jsx"
 import FormBox from "./form_box.jsx"
 import * as firebase from 'firebase'
 
-
-
-
 // function FormBox (props) {
 // 	console.log(`fct called, props is ${props.showing}`)
 // 	if (props.showing === 'asker') {
@@ -17,8 +14,6 @@ import * as firebase from 'firebase'
 // 	}
 // }
 
-
-
 class FormContainer extends Component {
 
 	constructor (props) {
@@ -26,7 +21,6 @@ class FormContainer extends Component {
 
 		this.state = {
 			selectedTab: 0,
-			userId: Math.floor(Math.random() * 100000)
 		}
 	}
 
@@ -80,7 +74,7 @@ render() {
 	return (
       <div className="form-container">
 	      <ProgressBar profileType = {profileType} loggedIn = {false} selectedTab = {this.state.selectedTab}/>
-	      <FormBox profileType = {profileType} loggedIn = {false} selectedTab = {this.state.selectedTab} userId = {this.state.userId} handleNextTab = {this.handleNextTab}/>
+	      <FormBox profileType = {profileType} loggedIn = {false} selectedTab = {this.state.selectedTab} userId = {this.props.userId} handleNextTab = {this.handleNextTab} testMode = {this.props.testMode}/>
       </div>
 		);
 

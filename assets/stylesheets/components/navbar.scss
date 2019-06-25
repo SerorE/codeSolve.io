@@ -1,0 +1,21 @@
+//navbar
+
+.navbar{
+  height: 70px;
+    min-height: 65px !important;
+    background-color: #f4f4f794;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0 !important;
+  .navbar-brand {
+    height: auto;}
+}
+
+.navbar-links {
+  display: flex;
+  flex-direction: row;
+}
+
+.navbar-brand img {
+  width: 200px;
+}

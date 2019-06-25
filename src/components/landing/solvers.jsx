@@ -31,15 +31,12 @@ class HeadsBanner extends Component {
 
       return (
 
-          <div key={languageImage} className="language-box">
+          <div key={languageImage} className="solver-box">
 
                 <img src= {srcFace} className = 'face-avatar'/>
                 <div className = "language-box-lower">
                   <div className = "person-name">{personName}</div>
                   <div className = "specialty">{specialty}</div>
-
-
-
                 </div>
           </div>
         ); 
@@ -57,9 +54,16 @@ render() {
   return (
 
 
-  <div className="language-boxes-container">
-      {this.renderList()}
-  </div>
+
+      <div className="banner solver-banner">
+        <h2>Our top solvers in June</h2>
+      <div className="solver-boxes-container">
+
+          {this.renderList()}
+      </div>
+
+    </div>
+
 
     );
 }

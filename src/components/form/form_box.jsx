@@ -4,8 +4,6 @@ import * as firebase from 'firebase'
 
 // import Button from 'react-bootstrap/Button';
 
-
-
 class FormBox extends Component {
 
   constructor(props) {
@@ -33,9 +31,9 @@ handleSubmit = () => {
 		const userId = this.props.userId;
 		const profileType = this.props.profileType;
 
-const testMode = false;
+const testMode = this.props.testMode
 
-console.log(`userId is ${userId}`);
+console.log(`testMode in form_box is  is ${testMode}`);
 
 	if (!testMode){ 
 
@@ -85,13 +83,6 @@ handleChange = (event) => {
     	[name]: value
     });
 }
-
-
-// handleSelection = selectedOption => {
-//     this.setState({
-//     	'task_cat': selectedOption
-//     });
-// }
 
 
 	render() {

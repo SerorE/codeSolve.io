@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 
-class StepsBanner extends Component {
+class Steps extends Component {
 
 
   renderList = () => { 
@@ -22,7 +22,7 @@ class StepsBanner extends Component {
 
         const id = `${stepImage}`
       return (
-          <div key={stepImage} className="step-circle" id = {id}>
+          <div key={stepImage} className="step" id = {id}>
                   <img src= {srcImage} className = 'step-icon'/>
                 <p> {stepText }</p>
           </div>
@@ -34,15 +34,21 @@ render() {
     // console.log(`heads is ${this.props.heads}`);
   // const loggedIn = this.props.loggedIn;
   return (
-  <div className="step-circles-container">
-      {this.renderList()}
-  </div>
+
+ <div className="banner step-banner">
+    <h2>How it works</h2>
+
+      <div className="steps-container">
+          {this.renderList()}
+      </div>
+</div>
+
 
     );
 }
 }
 
-export default StepsBanner;
+export default Steps;
 
 
 

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import Navbar from './landing/navbar.jsx';
-import CtaBanner from './landing/cta_banner.jsx';
-import StepsBanner from './landing/steps_banner.jsx';
+import MainBanner from './landing/main_banner.jsx';
+import Steps from './landing/steps.jsx';
 
-import HeadsBanner from './landing/heads_banner.jsx';
+import Solvers from './landing/solvers.jsx';
 import FormContainer from './form/form_container.jsx';
 import firebase from '../config/fbConfig';
 
@@ -15,16 +15,35 @@ constructor (props) {
 
 
 	this.state = {
-		profileType: 'none'
+		profileType: 'none',
+		userId: Math.floor(Math.random() * 100000),
+		testMode: false,
 	}
 }
 
 
 handleClickLanding = (profileType) => {
-	console.log(`profileType from handleClickLanding is ${profileType}`)
+
+		if (!this.state.testMode) {
+
+		firebase.database().ref('forms/' + profileType + '/Id - ' + this.state.userId ).set({
+		button_pressed : true
+		  });
+
+		}
+
+
+
+
+	console.log(`sent to firebase with userId ${this.state.userId}`)
+	console.log(`profileType from handleClickLanding yolo is ${profileType}`)
 	this.setState ({
 		profileType: profileType
+
 	});
+
+
+
 }
 
 journeyOver = () => {
@@ -44,21 +63,21 @@ render() {
 		landingClassName = 'landing-container'
 
 	} else {
-		formContainer = <FormContainer profileType = {this.state.profileType} userId = {this.state.userId} journeyOver = {this.journeyOver }/>
+		formContainer = <FormContainer profileType = {this.state.profileType} userId = {this.state.userId} journeyOver = {this.journeyOver } testMode = {this.state.testMode}/>
 		landingClassName = 'landing-container filtered-out'
 	}
 	// console.log('app gets rendered');
 		// const landingClassName = this.state.profileType != 'none' ? 'landing-container filtered-out' : 'landing-container'
 
 		return (
-		    <div >
+		    <div className = "landing-and-form-container">
 
 			    <div className = {landingClassName} onClick ={() => console.log('landing clicked')} >
 			   		<Navbar />
-			   		<CtaBanner handleClickLanding= {this.handleClickLanding}/>
-			   		<StepsBanner />
+			   		<MainBanner handleClickLanding= {this.handleClickLanding}/>
+			   		<Steps />
 
-			   		<HeadsBanner />
+			   		<Solvers />
 
 			    </div>
 			    {formContainer}

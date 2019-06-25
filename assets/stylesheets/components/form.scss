@@ -4,7 +4,10 @@
 .form-container{
 	z-index: 1000;
 	// height: 320px;
-	width: 750px; 
+	position:fixed;
+	width: 40%;
+	top:30%;
+	left:30%; 
 	background-color: white;
 	//border-radius: 15px;
 	display: flex;

@@ -27,6 +27,7 @@
     "webpack-dev-server": "^3.1.10"
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "bootstrap": "^4.3.1",
     "file-loader": "^4.0.0",
     "firebase": "^6.2.0",

@@ -1,0 +1,130 @@
+.banner {
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  padding: 4.5% 0;
+  margin: 30vh 0;
+}
+
+.banner h1 {
+/*  margin: 0;
+*/  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 40px;
+  font-weight: bold;
+}
+
+h2 {
+  margin: 0;
+  margin-bottom: 40px;
+  color: #484fda;
+  color: white;
+  letter-spacing: 1.7px;
+  font-weight: 300;
+  font-size: 40px;
+  padding: 0 0 25px;
+}
+
+.banner .signup-btn {
+margin-top: 20px;
+}
+
+
+.btns-container{
+margin-left: auto;
+margin-right: auto;
+  width: 430px;
+  display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.login-btn, .issue-btn{
+  background-color: #484fda;
+  // background-color : #da484f;
+  // border-color:  #c44047;
+  color: white;
+
+
+}
+
+
+.asker-btn, .solver-btn{
+  border-radius: 5px;
+  height:50px;
+  width: 200px;
+  font-weight: 300;
+  font-weight: bold;
+
+}
+
+.solver-btn{
+  // line-height: 35px !important;
+  // border-width: 2px !important;
+  // background-color: transparent;
+
+  font-size: 19px;
+  line-height: 35px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #9195e8;
+    background: rgb(145,149,232);
+background: radial-gradient(circle, rgba(145,149,232,1) 0%, rgba(108,114,225,1) 100%);
+ -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+
+
+
+.asker-btn {
+  font-size: 23px;
+border: none;
+    padding-top: 8px;
+background: rgb(145,149,232);
+background: radial-gradient(circle, rgba(145,149,232,1) 0%, rgba(108,114,225,1) 100%);
+// with #9195e8 and #6c72e1
+
+
+}
+
+.asker-btn:hover {
+  color: #cccccc;
+background: rgb(116,119,185) !important;
+background: radial-gradient(circle, rgba(116,119,185,1) 0%, rgba(86,91,180,1) 100%) !important;
+
+}
+
+
+.solver-btn:hover {
+background: radial-gradient(circle, rgba(116,119,185,1) 0%, rgba(86,91,180,1) 100%);
+ -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-color: #7477b9;
+
+
+}
+
+
+
+// .login-btn:hover, .asker-btn:hover {
+//     background-color : #c44047;
+//     // border-color:  #ae393f;
+//   color: white;
+// }
+
+
+// .ctas-container a.btn {
+//   // border-radius: 0;
+//   // border: none;
+// }
+// .ctas-container a.btn:hover {
+//   background-color: #ffffff;
+//   color: #484fda;
+// }
+
+// .ctas-container a.solver-btn:hover{color: #484fda !important;}
+//   #computer, #star{
+//     margin-top: 0 !important;
+//   }

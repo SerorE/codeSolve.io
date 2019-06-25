@@ -18,9 +18,7 @@ render() {
 
 
         <div className="navbar-links">
-        <div ></div>
-              <a className="nav-link" href="#">Contact</a>
-
+              <a className="nav-link" href="mailto:elliot@dumtech.io">Contact</a>
         </div>
       </div>
 		);
